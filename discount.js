@@ -20,8 +20,10 @@ document.getElementById("btn-get-item-percues").addEventListener("click",functio
     costumerPayAmmount.innerText = totalPriceNumber - discount
     
    }
+   
 
 })
+
 
 
 document.getElementById("go-home").addEventListener("click",function(){
@@ -37,6 +39,21 @@ document.getElementById("go-home").addEventListener("click",function(){
    discountPrice.innerText = "0.00";
    coustomerPay.innerText = "0.00";
 
+
+   const cupponButton = document.getElementById('btn-get-item-percues')
+    if (parseFloat(totalPrice) > 200) {
+      cupponButton.removeAttribute('disabled');
+      } else {
+        cupponButton.setAttribute('disabled', 'disabled');
+      }
+
+      const getBtn = document.getElementById('btnModal')
+      if (parseFloat(totalPrice) > 0) {
+        getBtn.removeAttribute('disabled');
+        } else {
+          getBtn.setAttribute('disabled', 'disabled');
+        }
+      
 
    
 
